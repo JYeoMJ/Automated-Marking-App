@@ -17,6 +17,8 @@
 # Submission & Checkpoint Scoring:
 # When the user clicks the Submit LaTeX for Checkpoint Scoring button in the form, the (possibly edited) LaTeX is sent to the OpenAI API for evaluation. The result—including score, feedback, and token usage—is then displayed.
 
+# add this to docker? pip install streamlit-drawable-canvas
+
 import streamlit as st
 import cv2
 import numpy as np
