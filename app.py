@@ -1,7 +1,8 @@
 # Preprocessing of images:
 # perspective corrrection, binarisation, segmentation
 # Newest update: Using Handwritten Input via Canvas, powered by streamlit-drawable-canvas
-# same sequence. but can remove perspective correction. 
+# to add to docker
+# same preprocesssing but can remove perspective correction. 
 
 # im2latex Conversion:
 # Each segmented region is passed to the im2latex_convert() placeholder, which in a real implementation would use a trained image-to-LaTeX model. 
@@ -16,8 +17,6 @@
 
 # Submission & Checkpoint Scoring:
 # When the user clicks the Submit LaTeX for Checkpoint Scoring button in the form, the (possibly edited) LaTeX is sent to the OpenAI API for evaluation. The result—including score, feedback, and token usage—is then displayed.
-
-# add this to docker? pip install streamlit-drawable-canvas
 
 import streamlit as st
 import cv2
@@ -147,10 +146,10 @@ def convert_image_to_latex(image: Image.Image) -> str:
     image_cv = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
     
     # Optional: Perspective correction (for non-flat inputs).
-    corrected = perspective_correction_cv2(image_cv)
+    # corrected = perspective_correction_cv2(image_cv)
     
     # Binarize the image.
-    binary = binarize_image_cv2(corrected)
+    binary = binarize_image_cv2(image_cv)
     
     # Segment the image.
     segments = segment_image_cv2(binary)
