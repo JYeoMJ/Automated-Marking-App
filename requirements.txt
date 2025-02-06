@@ -1,4 +1,10 @@
-streamlit==1.24.0
-Pillow==9.5.0
-pytesseract==0.3.10
-openai==0.27.8
+streamlit==1.24.0 #web interface
+Pillow==9.5.0 #image handling
+pytesseract==0.3.10 #OCR processing
+openai==0.27.8 #OpenAI API for evaluation
+
+# streamlit-drawable-canvas \ Drawing canvas for handwritten input
+# numpy \ image processing
+# opencv-python-headless \ OpenCV functions for preprocessing
+# json5 \ for handling JSON responses
+# logging for debugging
