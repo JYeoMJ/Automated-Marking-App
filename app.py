@@ -53,6 +53,8 @@ def order_points(pts: np.array) -> np.array:
     
     return rect
 
+# not impt if using handwriting
+# already removed from the actual processing at the bottom
 def perspective_correction_cv2(image: np.array) -> np.array:
     """
     Applies perspective correction by detecting the largest 4-point contour.
